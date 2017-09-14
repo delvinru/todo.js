@@ -1,0 +1,20 @@
+body{
+    color: #ffffff;
+}
+
+.header{
+    background-color: #DB4437;
+}
+
+.todo-item{
+    background-color: #DB4437;
+}
+
+.todo-item input{
+    background-color: #DB4437; 
+}
+
+.task{
+    background-color: #DB4437;
+}
+

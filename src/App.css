@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Roboto&subset=cyrillic');
+
+@font-face {
+    font-family: Aventura;
+    src: url(font/Aventura.otf) format(otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #eee;
+    color: #323330;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header{
+    font-family: 'Aventura', sans-serif;
+    background-color: #F0DB4F;
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    border-radius: 20px 20px 0 0;
+}
+
+.dot{
+    margin-top: -35px;
+    font-size: 2em;
+}
+
+.todo-wrapper{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.todo-input{
+    height: 80px;  
+    background-color: #e0e0e0;
+    display: block;
+    padding-left: 20px;
+    padding-right: 60px;
+	width: 100%;
+	border: none;
+	color: rgba(0,0,0,0.8);
+	font-size: 1em;
+    line-height: 1;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.todo-input:focus{
+    outline:none;
+}
+
+.todo-btn{
+    position: absolute;
+    outline: none;
+    border: none;
+    font-size: 1.5em;
+    background: transparent;
+    top: 30px;
+    right: 20px;
+    margin-left: 80%;
+    cursor: pointer;
+    color: #323330 !important;
+}
+
+.todo-item{
+    position: relative;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    background-color: #F0DB4F;
+    width: 100%;
+}
+
+.todo-item input{
+    border: none;
+    outline: none;
+    height:  68px;
+    width: 700px;
+    background:#F0DB4F;
+    font-size: 1.4em;
+    padding: 20px 10px;
+    font-family: 'Roboto', sans-serif;
+    resize: none;
+    overflow: auto;
+}
+
+.todo-item input:focus{
+    outline: none;
+    border:none;
+}
+
+.task{
+    background-color: #F0DB4F;
+    padding: 20px 10px;
+    font-size: 1.4em;
+    font-family: 'Lobster', cursive;
+    width: 80%;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+.task-save{
+    width: 100%;
+    height: 20px;
+}
+
+.action{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.action-btn{
+    outline: none;
+    border: none;
+    font-size: 1.6em;
+    background: transparent;
+    top: 30px;
+    right: 5px;
+    margin-left: 10px;
+    padding: 5px;
+    cursor: pointer; 
+}
+
+/* Footer */
+
+.footer{
+    color: #323330 !important;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 300px;
+}
+
+.footer h3{
+    font-weight: normal;
+}
+
+.footer ul li{
+    display: inline-block;
+    list-style-type: none;
+    margin: 10px 20px;
+}
+
+.footer a, .footer a:visited{
+    color: #323330;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    color: #F0DB4F;
+}
+
+
+/* Themes */
+
+.themes-picker{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    text-align: right;
+    color: #323330 !important;
+}
+
+.color-picker{
+    background-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+.color-picker > *{
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.color-picker > .red:hover{
+    box-shadow: 0 0 0 4px #e0e0e0, 0 0 0 6px #DB4437;
+}
+
+.color-picker > .black:hover{
+    box-shadow: 0 0 0 4px #e0e0e0, 0 0 0 6px #212121;
+}
+.color-picker > .yellow:hover{
+    box-shadow: 0 0 0 4px #e0e0e0, 0 0 0 6px #F0DB4F;
+}
+.color-picker > .purple:hover{
+    box-shadow: 0 0 0 4px #e0e0e0, 0 0 0 6px #9C27B0;
+}
+
+/* Thumbcolor */
+
+.red{
+    height: 50px;
+    width: 50px;
+    background-color: #DB4437;
+    border-radius: 50%;
+}
+
+.black{
+    height: 50px;
+    width: 50px;
+    background-color: #212121;
+    border-radius: 50%;
+}
+
+.yellow{
+    height: 50px;
+    width: 50px;
+    background-color: #F0DB4F;
+    border-radius: 50%;
+}
+
+.purple{
+    height: 50px;
+    width: 50px;
+    background-color: #9C27B0;
+    border-radius: 50%;
+}
+
+/* Media */
+
+@media screen and (max-width: 800px) {
+    .todo-item input{
+        width: 650px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .todo-item input{
+        width: 500px
+    }
+}
+
+@media screen and (max-width: 425px){
+    .todo-item input{
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .todo-item input{
+        width: 270px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .todo-item input{
+        width: 240px;
+    }
+}
